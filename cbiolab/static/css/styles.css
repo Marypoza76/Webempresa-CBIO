@@ -1,0 +1,211 @@
+/* =========================
+   Configuración Base
+   ========================= */
+   :root {
+    --primary-color: #004b6f;
+    --secondary-color: #2c6a8c;
+    --background-color: rgba(0, 0, 0, 0.6);
+    --white: white;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background-image: url("{% static 'images/fondo-laboratorio.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+/* =========================
+   Estilos de Párrafos y Enlaces
+   ========================= */
+p, a {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* =========================
+   Estilos de Encabezado
+   ========================= */
+header {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    width: 200px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    opacity: 0.95;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   Estilos de Títulos
+   ========================= */
+h1, h2, h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+/* =========================
+   Botones
+   ========================= */
+button {
+    padding: 0.625rem 1.25rem;
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* =========================
+   Sección de Servicios
+   ========================= */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.service-item {
+    width: 30%;
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--shadow-color);
+}
+
+.service-item h3 {
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* =========================
+   Estilos Responsivos
+   ========================= */
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    header img {
+        width: 150px;
+    }
+
+    .form-container {
+        padding: 20px;
+        width: 90%;
+    }
+}
+
+/* =========================
+   Estilos para Formularios
+   ========================= */
+.form-container {
+    background-color: var(--background-color);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 1.25rem;
+}
+
+.form-container label {
+    color: var(--white);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Estilos adicionales para enfoque */
+.form-container input:focus,
+.form-container textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+.background {
+    background-image: url('../images/fondo-laboratorio.jpg');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    height: 100vh; /* Altura del contenedor */
+    width: 100%; /* Ancho del contenedor */
+}
+
+/* cbiolab/static/css/styles.css */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000; /* Cambia el color según tu diseño */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Efecto al pasar el mouse */
+}

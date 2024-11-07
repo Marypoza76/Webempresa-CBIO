@@ -1,0 +1,11 @@
+{% extends 'cbiolab/base.html' %}
+{% load static %}
+{% block content %}
+<h1>Contacto</h1>
+<form class="form-container" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enviar</button>
+</form>
+{% endblock %}
+
